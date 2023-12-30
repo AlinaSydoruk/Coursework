@@ -1,0 +1,99 @@
+{
+  "repeat": {
+    "second": 9,
+    "minutes": 8,
+    "hours": 7,
+    "dayOfMonth": 6,
+    "month": 5,
+    "dayOfWeek": 4
+  },
+  "//conditions1": "Види: AFK, KEY-PRESSED, KEY-HOLDING, MOUSE-PRESSED, MOUSE-WHEEL-SCROLLING",
+  "//conditions2": "Умови не перевіряються, якщо є \"repeat\" поле",
+  "conditions": [
+    {
+      "type": "AFK",
+      "//times": "Вимірюється в хвилинах",
+      "time": 1
+    },
+    {
+      "type": "KEY-PRESSED",
+      "key": "l"
+    },
+    {
+      "type": "KEY-HOLDING",
+      "key": "Shift"
+    },
+    {
+      "type": "MOUSE-PRESSED",
+      "key": "Left"
+    },
+    {
+      "type": "MOUSE-WHEEL-SCROLLING",
+      "direction": "up"
+    }
+  ],
+  "//delay1": "(Опціонально) hours, minutes, seconds, можна не вказувати, тоді затримка буде 1 секунда",
+  "//delay2": "Можна вказувати тільки те, що потрібно, інше виставиться автоматично",
+  "delay": {
+    "hours": 3,
+    "minutes": 2,
+    "seconds": 1
+  },
+  "//repeatAmount": "Скільки раз зможе виконатись скріпт",
+  "repeatAmount": 3,
+  "//actions": "CONSOLE KEYBOARD",
+  "actions": [
+    {
+      "type": "CONSOLE",
+      "text": "Hello World!"
+    },
+    {
+      "type": "KEYBOARD",
+      "keys": "shift c v v v",
+      "//simultaneously": "(Опціонально) за замовчуванням false",
+      "simultaneously": true
+    },
+    {
+      "type": "INTERNET",
+      "request": "DOWNLOAD",
+      "url": "https://i.imgur.com/SyFipEg.jpg",
+      "name": "photo.jpg",
+      "path": "C:/Alya/del"
+    },
+    {
+      "type": "INTERNET",
+      "request": "GET",
+      "url": "https://i.imgur.com/SyFipEg.jpg",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "*/*"
+      }
+    },
+    {
+      "type": "INTERNET",
+      "request": "POST",
+      "url": "http://localhost:8081/plugins/execute",
+      "//jsonBody": "тільки json'ки, опшнал параметр",
+      "jsonBody": "[{\"type\": \"CONSOLE\",\"text\": \"INNER CONSOLE CALLBACK\"}]",
+      "//headers": "хедери в запиту, опшнал параметр",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "*/*"
+      }
+    },
+    {
+      "//type": "або click, або position; якщо обидва одночасно, то зажметься кнопка, переміститься мишка, відіжметься кнопка",
+      "type": "MOUSE",
+      "click": "LBUTTON",
+      "//position": "Види положень: 40 (на координату), * (залишитись на координаті), -120* (відносно зміститись на координаті)",
+      "position": "100 -220*"
+    },
+    {
+      "type": "MAIL",
+      "//addresses": "Можна ввести одну адресу. можна декілька через пробіл",
+      "addresses": "alinasydoruk19@gmail.com",
+      "subject": "My mail",
+      "body": "Hello! it's my email"
+    }
+  ]
+}

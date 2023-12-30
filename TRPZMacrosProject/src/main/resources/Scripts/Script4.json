@@ -1,0 +1,35 @@
+{
+
+  "conditions": [
+
+    {
+      "type": "KEY-PRESSED",
+      "key": "a"
+    }
+  ],
+  "//repeatAmount": "Скільки раз зможе виконатись скріпт",
+  "repeatAmount": 20,
+  "delay": {
+    "seconds": 1
+  },
+  "actions": [
+    {
+      "type": "KEYBOARD",
+      "keys": "control x",
+      "//simultaneously": "(Опціонально) за замовчуванням false",
+      "simultaneously": true
+    },
+    {
+      "type": "KEYBOARD",
+      "keys": "t e x t",
+      "//simultaneously": "(Опціонально) за замовчуванням false",
+      "simultaneously": true
+    },
+    {
+      "type": "KEYBOARD",
+      "keys": "control v",
+      "//simultaneously": "(Опціонально) за замовчуванням false",
+      "simultaneously": true
+    }
+  ]
+}

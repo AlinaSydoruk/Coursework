@@ -1,0 +1,23 @@
+{
+
+  "repeat": {
+    "second": 9
+
+  },
+
+  "//repeatAmount": "Скільки раз зможе виконатись скріпт",
+  "repeatAmount": 2,
+  "delay": {
+    "seconds": 1
+  },
+  "actions": [
+    {
+      "type": "MAIL",
+      "//addresses": "Можна ввести одну адресу. можна декілька через пробіл",
+      "addresses": "alinasydoruk19@gmail.com",
+      "subject": "My mail",
+      "body": "Hello! it's my email"
+    }
+
+  ]
+}
